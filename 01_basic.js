@@ -1,4 +1,4 @@
-import * as THREE from './modules/three.module'
+import * as THREE from './modules/three.module.js'
 
 class App {
     // field와 method를 밑줄로 시작하는 이유는, private로 사용하기 위함이다.
@@ -76,6 +76,12 @@ class App {
         this._renderer.render(this._scene, this._camera);
         this.update(time);
         requestAnimationFrame(this.render.bind(this))
+    }
+
+    update(time) {
+        time *= 0.001;
+        this._cube.rotation.x = time;
+        this._cube.rotation.y = time;
     }
 }
 
