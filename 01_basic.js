@@ -1,4 +1,4 @@
-import * as THREE from './modules/three.module.js'
+import * as THREE from './modules/build/three.module.js'
 
 class App {
     // field와 method를 밑줄로 시작하는 이유는, private로 사용하기 위함이다.
